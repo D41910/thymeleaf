@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>springboot-thymeleaf数据显示</title>
+</head>
+<body>
+    <table border="1" width="600">
+        <thead>
+            <tr>
+                <td>学号</td>
+                <td>学生姓名</td>
+                <td>年龄</td>
+                <td>性别</td>
+                <td>生日</td>
+            </tr>
+        </thead>
+        <tr th:each="li:${studentList}">
+            <td th:text="${li.studentId}"></td>
+            <td th:text="${li.name}"></td>
+            <td th:text="${li.age}"></td>
+            <td th:text="${li.sex}"></td>
+            <td th:text="${li.birthday}"></td>
+        </tr>
+    </table>
+</body>
+</html>
